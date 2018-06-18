@@ -1,6 +1,8 @@
 package com.zipcodewilmington.assessment2.part4;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -18,7 +20,21 @@ public class CsvParser {
      *                          or when there are missing fields
      */
     protected User parseRow(String row) throws BadDataException {
-        return null;
+        User user = new User();
+        String newRow = row.replaceAll("\n", "");
+        List<String> items = Arrays.asList(newRow.split("\\s*,\\s*"));
+          try {
+              int id = Integer.parseInt(items.get(0));
+              user.setId(id);
+              user.setFirstName(items.get(1));
+              user.setLastName(items.get(2));
+              user.setEmail(items.get(3));
+          }
+          catch(Exception e){
+               throw new BadDataException();
+        }
+
+        return user;
     }
 
     /**

@@ -6,16 +6,19 @@ import java.util.Comparator;
 
 public class SpeedComparator implements Comparator<Animal>{
 
-
-
     public int compare(Animal o1, Animal o2) {
-        if(o1.getSpeed() == o2.getSpeed())
+        int animal1 = o1.getSpeed();
+        int animal2 = o2.getSpeed();
+
+        if(animal1 == animal2)
         return 0;
 
-        else if(o1.getSpeed() > o2.getSpeed())
+        else if(animal1 > animal2)
         return 1;
 
         else
             return -1;
     }
+
+
 }
