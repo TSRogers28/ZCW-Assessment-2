@@ -3,8 +3,8 @@ package com.zipcodewilmington.assessment2.part6;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
-@DatabaseTable(tableName = "users")
-public class User {
+    @DatabaseTable(tableName = "users")
+    public class User {
 
     @DatabaseField(generatedId = true)
     private long id;

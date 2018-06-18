@@ -81,7 +81,7 @@ public class SqlTest {
 
         String actual = commands.selectInDescendingOrder(tableName, column);
         int actualHashCode = getHashCode(actual);
-        int expectedHashCode = -1610963405;
+        int expectedHashCode = 779317431;
 
         Assert.assertEquals(expectedHashCode, actualHashCode);
     }
